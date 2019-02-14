@@ -42,6 +42,13 @@ public class VisaoPanel extends JTextArea {
 		
 	}
 	
+	public void diminuiFonte() {
+		
+		setTamanhoFonte(getTamanhoFonte() - 1);
+		atualizaFonte();
+		
+	}
+	
 	public void atualizaFonte() {
 		
 		fonte = new Font(tipoFonte, negrito == true ? Font.BOLD : Font.PLAIN, tamanhoFonte);

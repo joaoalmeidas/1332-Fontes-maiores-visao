@@ -59,6 +59,19 @@ public class VisaoFrame extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				
 				panelVisao.aumentaFonte();
+				labelTamanho.setText((String.format("%d", panelVisao.getTamanhoFonte())));
+				
+			}
+			
+		});
+		
+		diminuiFonte.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				
+				panelVisao.diminuiFonte();
+				labelTamanho.setText((String.format("%d", panelVisao.getTamanhoFonte())));
 				
 			}
 			
