@@ -44,6 +44,9 @@ public class VisaoFrame extends JFrame {
 		diminuiFonte.setFont(fonteControle);
 		labelTamanho.setFont(fonteControle);
 		
+		panelVisao.setLineWrap(true);
+		panelVisao.setWrapStyleWord(true);
+		
 		panelControle.add(comboFontes);
 		panelControle.add(checkNegrito);
 		panelControle.add(aumentaFonte);
@@ -106,6 +109,7 @@ public class VisaoFrame extends JFrame {
 			}
 			
 		});
+		
 	}
 	
 	

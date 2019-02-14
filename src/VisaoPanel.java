@@ -55,7 +55,12 @@ public class VisaoPanel extends JTextArea {
 	
 	public void diminuiFonte() {
 		
-		setTamanhoFonte(getTamanhoFonte() - 1);
+		if(getTamanhoFonte() != 1) {
+			
+			setTamanhoFonte(getTamanhoFonte() - 1);
+			
+		}
+
 		atualizaFonte();
 		
 	}
