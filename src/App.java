@@ -6,7 +6,7 @@ public class App {
 		
 		VisaoFrame visao = new VisaoFrame();
 		visao.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		visao.setSize(500, 500);
+		visao.setSize(800, 800);
 		visao.setVisible(true);
 		
 	}

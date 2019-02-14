@@ -1,6 +1,8 @@
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -23,10 +25,8 @@ public class VisaoFrame extends JFrame {
 	private final JLabel labelTamanho;
 	private final Font fonteControle;
 	
-	private int tamanhoFonte = 18;
 	
 	public VisaoFrame() {
-		
 		
 		panelControle = new JPanel(new FlowLayout());
 		fonteControle = new Font("SansSerif", Font.PLAIN, 20);
@@ -36,7 +36,7 @@ public class VisaoFrame extends JFrame {
 		checkNegrito = new JCheckBox("Negrito");
 		aumentaFonte = new JButton("Aumenta Fonte");
 		diminuiFonte = new JButton("Diminui Fonte");
-		labelTamanho = new JLabel(String.format("%d", tamanhoFonte));
+		labelTamanho = new JLabel(String.format("%d", panelVisao.getTamanhoFonte()));
 		
 		comboFontes.setFont(fonteControle);
 		checkNegrito.setFont(fonteControle);
@@ -52,15 +52,19 @@ public class VisaoFrame extends JFrame {
 		
 		add(panelControle, BorderLayout.NORTH);
 		add(panelVisao);
+		
+		aumentaFonte.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				
+				panelVisao.aumentaFonte();
+				
+			}
+			
+		});
 	}
 	
-	public int getTamanhoFonte() {
-		return tamanhoFonte;
-	}
-
-	public void setTamanhoFonte(int tamanhoFonte) {
-		this.tamanhoFonte = tamanhoFonte;
-	}
 	
 	
 }
