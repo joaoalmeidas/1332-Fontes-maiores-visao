@@ -87,6 +87,25 @@ public class VisaoFrame extends JFrame {
 			}
 			
 		});
+		
+		checkNegrito.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				
+				if(checkNegrito.isSelected()) {
+					
+					panelVisao.setNegrito(true);
+					
+				}else {
+					
+					panelVisao.setNegrito(false);
+					
+				}
+				
+			}
+			
+		});
 	}
 	
 	

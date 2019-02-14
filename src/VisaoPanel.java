@@ -33,6 +33,7 @@ public class VisaoPanel extends JTextArea {
 
 	public void setNegrito(boolean negrito) {
 		this.negrito = negrito;
+		atualizaFonte();
 	}
 	
 	
@@ -66,10 +67,13 @@ public class VisaoPanel extends JTextArea {
 		
 	}
 	
+
+	
 	public void atualizaFonte() {
 		
 		fonte = new Font(tipoFonte, negrito == true ? Font.BOLD : Font.PLAIN, tamanhoFonte);
 		setFont(fonte);
+		
 	}
 
 
