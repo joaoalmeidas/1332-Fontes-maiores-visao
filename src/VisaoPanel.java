@@ -35,6 +35,16 @@ public class VisaoPanel extends JTextArea {
 		this.negrito = negrito;
 	}
 	
+	
+	
+	public String getTipoFonte() {
+		return tipoFonte;
+	}
+
+	public void setTipoFonte(String tipoFonte) {
+		this.tipoFonte = tipoFonte;
+	}
+
 	public void aumentaFonte() {
 		
 		setTamanhoFonte(getTamanhoFonte() + 1);
@@ -45,6 +55,13 @@ public class VisaoPanel extends JTextArea {
 	public void diminuiFonte() {
 		
 		setTamanhoFonte(getTamanhoFonte() - 1);
+		atualizaFonte();
+		
+	}
+	
+	public void alteraTipoFonte(String nome) {
+		
+		setTipoFonte(nome);
 		atualizaFonte();
 		
 	}
